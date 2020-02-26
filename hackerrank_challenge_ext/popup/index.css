@@ -1,0 +1,50 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  width: 300px;
+  height: 300px;
+  font-family: sans-serif;
+}
+.text-red {
+  color: red;
+}
+.text-green {
+  color: #4fc08d;
+}
+.header, .footer {
+  padding: 15px;
+  text-align: center;
+  /* color: #585858; */
+}
+.header{
+  border-bottom: 1px solid #ccc;
+}
+.footer {
+  border-top: 1px solid #ccc;
+}
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.username {
+  font-size: 1rem;
+}
+.hidden {
+  display: none !important;
+}
+#score {
+  margin: 20px;
+  width: 200px;
+  height: 200px;
+  position: relative;
+}

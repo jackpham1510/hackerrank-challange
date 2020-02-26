@@ -1,0 +1,154 @@
+{
+  "model": {
+    "id": 144432405,
+    "contest_id": 1,
+    "challenge_id": 447,
+    "hacker_id": 2414671,
+    "language": "cpp",
+    "kind": "code",
+    "status": "Accepted",
+    "language_status": 0,
+    "score_processed": 3,
+    "score": "1.0",
+    "solved": 1,
+    "partial": 0,
+    "mu": "0.0",
+    "variance": "0.0",
+    "code": "#include <bits/stdc++.h>\n\nusing namespace std;\n\nvector<string> split_string(string);\n\n// Complete the introTutorial function below.\nint introTutorial(int V, vector<int> arr) {\n    int l = 0, r = arr.size() - 1;\n    while (l <= r) {\n        int m = (r + l) / 2;\n        if (arr[m] == V) {\n            return m;\n        } else if (arr[m] < V) {\n            l = m + 1;\n        } else {\n            r = m - 1;\n        }\n    }\n\n    return -1;\n}\n\nint main()\n{\n    ofstream fout(getenv(\"OUTPUT_PATH\"));\n\n    int V;\n    cin >> V;\n    cin.ignore(numeric_limits<streamsize>::max(), '\\n');\n\n    int n;\n    cin >> n;\n    cin.ignore(numeric_limits<streamsize>::max(), '\\n');\n\n    string arr_temp_temp;\n    getline(cin, arr_temp_temp);\n\n    vector<string> arr_temp = split_string(arr_temp_temp);\n\n    vector<int> arr(n);\n\n    for (int i = 0; i < n; i++) {\n        int arr_item = stoi(arr_temp[i]);\n\n        arr[i] = arr_item;\n    }\n\n    int result = introTutorial(V, arr);\n\n    fout << result << \"\\n\";\n\n    fout.close();\n\n    return 0;\n}\n\nvector<string> split_string(string input_string) {\n    string::iterator new_end = unique(input_string.begin(), input_string.end(), [] (const char &x, const char &y) {\n        return x == y and x == ' ';\n    });\n\n    input_string.erase(new_end, input_string.end());\n\n    while (input_string[input_string.length() - 1] == ' ') {\n        input_string.pop_back();\n    }\n\n    vector<string> splits;\n    char delimiter = ' ';\n\n    size_t i = 0;\n    size_t pos = input_string.find(delimiter);\n\n    while (pos != string::npos) {\n        splits.push_back(input_string.substr(i, pos - i));\n\n        i = pos + 1;\n        pos = input_string.find(delimiter, i);\n    }\n\n    splits.push_back(input_string.substr(i, min(pos, input_string.length()) - i + 1));\n\n    return splits;\n}\n",
+    "compile_status": 0,
+    "compile_message": "",
+    "testcase_status": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "testcase_message": [
+      "Success",
+      "Success",
+      "Success",
+      "Success"
+    ],
+    "stderr": null,
+    "codechecker_signal": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "codechecker_time": [
+      0.113281621,
+      0.108070258,
+      0.117392329,
+      0.09965605
+    ],
+    "finishtime": null,
+    "created_at": "2020-02-25T03:08:43.000Z",
+    "updated_at": "2020-02-25T03:08:50.000Z",
+    "is_preliminary_score": null,
+    "test_weights": null,
+    "custom_challenge_config": null,
+    "downloadable_test_cases": true,
+    "status_code": 1,
+    "live_status": {
+      "live_message": "Fetching Results",
+      "codechecker_signal": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "progress": 7,
+      "progress_states": 7,
+      "testcase_status": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "testcase_message": [
+        "Success",
+        "Success",
+        "Success",
+        "Success"
+      ],
+      "custom_score": null
+    },
+    "name": "Intro to Tutorial Challenges",
+    "slug": "tutorial-intro",
+    "custom": false,
+    "is_custom": false,
+    "challenge_slug": "tutorial-intro",
+    "company": null,
+    "contest_slug": "master",
+    "created_at_epoch": "1582600123",
+    "player_count": 2,
+    "is_editorial_available": false,
+    "display_score": "30.0",
+    "free_test_cases": [],
+    "codechecker_hash": "eec7d63b6303428f651dfc4914c5df10",
+    "progress": 9,
+    "progress_states": 9,
+    "badges": [
+      {
+        "badge_category": "HackerBadge::MultiDomain",
+        "badge_type": "problem-solving",
+        "category_name": null,
+        "badge_name": "Problem Solving",
+        "badge_short_name": null,
+        "total_stars": 6,
+        "total_points": 2200,
+        "url": "/domains/algorithms",
+        "solved": 42,
+        "total_challenges": 563,
+        "track_total_score": 0,
+        "hacker_rank": 109465,
+        "stars": 5,
+        "level": 3,
+        "current_points": 856,
+        "progress_to_next_star": 0,
+        "upcoming_level": null
+      }
+    ],
+    "track_has_badge": true,
+    "track": {
+      "id": 38,
+      "name": "Sorting",
+      "slug": "arrays-and-sorting",
+      "track_id": 3,
+      "track_name": "Algorithms",
+      "track_slug": "algorithms"
+    },
+    "is_sample_testcase": [
+      true,
+      false,
+      false,
+      false
+    ],
+    "is_additional_testcase": [
+      false,
+      false,
+      false,
+      false
+    ],
+    "individual_test_case_score": [
+      0,
+      8.57,
+      8.57,
+      12.86
+    ],
+    "unlocked_challenges": "",
+    "next_challenge": {
+      "url": "/challenges/insertionsort1",
+      "name": "Insertion Sort - Part 1",
+      "slug": "insertionsort1",
+      "preview": "Insert an element into a sorted array.",
+      "solved_count": 116940,
+      "total_count": 134585,
+      "max_score": 30,
+      "difficulty_name": "Easy"
+    },
+    "next_challenge_slug": "insertionsort1",
+    "random_challenge_slug": "fraudulent-activity-notifications"
+  }
+}
