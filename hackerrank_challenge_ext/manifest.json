@@ -16,8 +16,8 @@
   "permissions": [
     "activeTab",
     "declarativeContent",
-    "debugger",
-    "storage"
+    "storage",
+    "*://*.dung.codes/*"
   ],
   "background": {
     "scripts": [
