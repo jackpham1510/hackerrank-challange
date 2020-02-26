@@ -36,6 +36,10 @@ function createScoreCircle(el, score = 0, total = 50) {
 
 chrome.storage.local.get(['username'], function(result) {
   console.log('username:', result.username);
+  if (!result.username) {
+    alert('Please refresh page and try again (make sure you are logged in).');
+    return;
+  }
   
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
