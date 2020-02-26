@@ -65,6 +65,6 @@ chrome.storage.local.get(['username'], function(result) {
     }
   };
 
-  xhttp.open("GET", "http://localhost:8133/api/profile/getone?username="+result.username, true);
+  xhttp.open("GET", "http://hc.dung.codes/api/profile/getone?username="+result.username, true);
   xhttp.send();
 });

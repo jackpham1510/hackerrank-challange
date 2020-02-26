@@ -17,13 +17,20 @@ async function startServer() {
   app.use(cors());
   app.use(bodyParser.urlencoded({ extended: false }));
   app.use(bodyParser.json());
+  app.use(express.static(path.join(__dirname, 'public')));
   
   app.use('/api', require('./handlers/api'));
-
+  
   app.use((err, req, res, next) => {
     console.error(err);
     res.sendStatus(err.status || 500);
   });
+
+  if (process.env.NODE_ENV !== 'dev') {
+    app.get('/', (req, res) => {
+      res.sendFile(path.join(__dirname + '/public/index.html'));
+    });
+  }
   
   const PORT = process.env.PORT || 8133;
   

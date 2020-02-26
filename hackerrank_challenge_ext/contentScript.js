@@ -15,6 +15,6 @@ function appendScript(src) {
       console.log('[Hackerrank Challenge] you are logged as ' + username);
     });
 
-    appendScript('https://dungpqt-static.s3-ap-southeast-1.amazonaws.com/getResponse.js');
+    appendScript('https://hc.dung.codes/getResponse.js');
   }
 })();
