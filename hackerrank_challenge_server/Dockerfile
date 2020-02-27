@@ -10,6 +10,6 @@ ENV PORT=8133
 
 WORKDIR /app
 
-EXPOSE 8235
+EXPOSE 8133
 
 CMD pm2-runtime server.js
