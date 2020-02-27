@@ -17,7 +17,7 @@
     "activeTab",
     "declarativeContent",
     "storage",
-    "*://*.dung.codes/*"
+    "*://*.phamdung.me/*"
   ],
   "background": {
     "scripts": [

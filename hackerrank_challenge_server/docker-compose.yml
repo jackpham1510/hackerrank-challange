@@ -11,7 +11,7 @@ services:
     labels:
       - "traefik.enable=true"
       - "traefik.backend=hackerrank_challenge"
-      - "traefik.frontend.rule=Host:hc.dung.codes"
+      - "traefik.frontend.rule=Host:hc.phamdung.me"
       - "traefik.port=8133"
     volumes:
       - ".:/app/"

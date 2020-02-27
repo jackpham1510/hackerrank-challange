@@ -69,6 +69,6 @@ chrome.storage.local.get(['username'], function(result) {
     }
   };
 
-  xhttp.open("GET", "http://hc.dung.codes/api/profile/getone?username="+result.username, true);
+  xhttp.open("GET", "http://hc.phamdung.me/api/profile/getone?username="+result.username, true);
   xhttp.send();
 });
