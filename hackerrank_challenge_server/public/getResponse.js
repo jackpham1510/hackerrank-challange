@@ -24,7 +24,7 @@ function put(url, data) {
             const score = Number(model.display_score);
 
             if (!putted[model.id] || putted[model.id] < score) {
-              put('http://hc.phamdung.me/api/submission/put', {
+              put('https://hc.phamdung.me/api/submission/put', {
                 score,
                 hackerId: model.hacker_id,
                 lang: model.language,
